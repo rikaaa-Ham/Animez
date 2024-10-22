@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Portofolio | html</title>
+    <link rel="stylesheet" href="./asset/styles/style.css">
+</head>
+
+<body>
+    <div class="h3-atas">
+        <h3 style="text-align: center;">Hard Materi cik pen muntah😔</h3>
+
+    </div>
+    <div class="container">
+        <div class="item">
+            <img class="pic-img" src="./asset/img/keqing.jpg" alt="">
+            <h3 id="keqingTtx">Keqing</h3>
+            <button id="buttonKeqing">show</button>
+            <p id="textKeqing">
+                Keqing adalah karakter yang memancarkan kecantikan dan pesona. Dengan rambut ungu panjang yang mengalir lembut, wajahnya dihiasi oleh fitur yang halus dan ekspresi yang cerdas. Matanya yang cerah dan tajam seakan menggambarkan tekad dan kepercayaan diri, memberikan kesan mendalam pada siapa pun yang melihatnya.
+            </p>
+        </div>
+        <div class="item">
+            <img class="pic-img" src="./asset/img/b8ef6bdb23b14a450d4f864c60d9fa51.jpg" alt="">
+            <h3 id="bocchiTtx">
+                Bocchi
+            </h3>
+            <button id="buttonBocchi">show</button>
+            <p id="textBocchi">
+                
+                Bocchi, atau lebih dikenal sebagai "Bocchi the Rock!" adalah karakter utama dari seri manga dan anime yang mengikuti perjalanan seorang gadis introvert bernama Hitori Gotoh. Ia memiliki kecintaan yang mendalam terhadap musik, terutama gitar, tetapi merasa kesulitan dalam bersosialisasi dan berinteraksi dengan orang lain.
+            </p>
+        </div>
+    </div>
+    <div class="buton">
+
+        <button id="toggleButton">Aktifkan Mode Gelap</button>
+    </div>
+
+<footer>
+  by hamjah 😴
+</footer>
+    <script>
+        // script.js
+        const toggleButton = document.getElementById('toggleButton');
+
+        // Menambahkan event listener untuk tombol
+        toggleButton.addEventListener('click', () => {
+            // Mengubah kelas body untuk mode gelap
+            document.body.classList.toggle('dark-mode');
+
+            // Mengubah teks tombol sesuai dengan mode
+            if (document.body.classList.contains('dark-mode')) {
+                toggleButton.textContent = 'Aktifkan Mode Terang';
+            } else {
+                toggleButton.textContent = 'Aktifkan Mode Gelap';
+            }
+        });
+        // tombol bocchi
+        document.getElementById('buttonBocchi').addEventListener('click', function() {
+    const paragraph = document.getElementById('textBocchi');
+
+    if (paragraph.style.display === 'none') {
+        paragraph.style.display = 'block'; // Tampilkan paragraf
+        this.textContent = 'hide'; // Ganti teks tombol
+    } else {
+        paragraph.style.display = 'none'; // Sembunyikan paragraf
+        this.textContent = 'show'; // Ganti teks tombol
+    }
+});
+        document.getElementById('buttonKeqing').addEventListener('click', function() {
+    const paragraph = document.getElementById('textKeqing');
+
+    if (paragraph.style.display === 'none') {
+        paragraph.style.display = 'block'; // Tampilkan paragraf
+        this.textContent = 'hide'; // Ganti teks tombol
+    } else {
+        paragraph.style.display = 'none'; // Sembunyikan paragraf
+        this.textContent = 'show'; // Ganti teks tombol
+    }
+});
+
+    </script>
+</body>
+
+</html>
